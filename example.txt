@@ -1,0 +1,5 @@
+in a
+b = a - 5
+c = 10
+d = b + c + 20
+out d

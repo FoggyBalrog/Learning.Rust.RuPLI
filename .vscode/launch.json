@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'nico-rupli-sandbox'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=nico-rupli-sandbox",
+                    "--package=nico-rupli-sandbox"
+                ],
+                "filter": {
+                    "name": "nico-rupli-sandbox",
+                    "kind": "bin"
+                }
+            },
+            "args": [
+                "--path", "/mnt/c/Users/nicolas.maurice/dev/Nico.RuPLI.Sandbox/example.txt", "--show-ast"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'nico-rupli-sandbox'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=nico-rupli-sandbox",
+                    "--package=nico-rupli-sandbox"
+                ],
+                "filter": {
+                    "name": "nico-rupli-sandbox",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

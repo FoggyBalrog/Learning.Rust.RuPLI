@@ -1,0 +1,16 @@
+Program      = Statement , { Statement } ;
+
+Statement    = Input
+             | Assignment
+             | Output ;
+
+Input        = "in" , Identifier ;
+
+Assignment   = Identifier , "=" , Expression ;
+
+Output       = "out" , Expression ;
+
+Expression   = Term , { ("+" | "-") , Term } ;
+
+Term         = Number
+             | Identifier ;
